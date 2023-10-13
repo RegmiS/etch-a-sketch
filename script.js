@@ -35,4 +35,12 @@ const range_input =  document.getElementById('range-selector');
 const cur_grid = document.querySelector('.grid-size');
 range_input.addEventListener('input', function(e) {
     cur_grid.innerHTML = `Grid size: ${e.target.value}x${e.target.value}`;
-})
+});
+
+const apply_btn =  document.querySelector('.apply');
+apply_btn.addEventListener('click', function(e) {
+    const clearning_input = document.querySelector('.grid-container');
+    clearning_input.innerHTML = '';
+    gridSize = range_input.value;
+    createGrid();
+});
