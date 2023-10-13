@@ -22,3 +22,11 @@ function createGrid() {
   }
   
 createGrid();
+
+const reset_btn = document.querySelector('.reset');
+reset_btn.addEventListener('click', () => {
+    let grid_squares = document.querySelectorAll('.grid-item');
+    for(let i=0; i<grid_squares.length; i++){
+        grid_squares[i].style.backgroundColor = 'white';
+    }
+});

@@ -30,3 +30,7 @@
 .grid-item:hover {
     background-color: blue;
 }
+
+.reset {
+    font-family: 'Courier New', Courier, monospace;
+}
