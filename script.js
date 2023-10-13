@@ -15,6 +15,8 @@ function createGrid() {
       const square = document.createElement('div');
       square.classList.add('grid-item');
       square.setAttribute('draggable', 'false');
+
+      square.onmouseover = () => square.style.backgroundColor = 'salmon';
       container.appendChild(square);
     }
   }

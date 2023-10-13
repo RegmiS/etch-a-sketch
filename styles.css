@@ -26,3 +26,7 @@
     border-style: solid;
     
 }
+
+.grid-item:hover {
+    background-color: blue;
+}
