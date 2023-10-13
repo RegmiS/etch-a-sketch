@@ -30,3 +30,9 @@ reset_btn.addEventListener('click', () => {
         grid_squares[i].style.backgroundColor = 'white';
     }
 });
+
+const range_input =  document.getElementById('range-selector');
+const cur_grid = document.querySelector('.grid-size');
+range_input.addEventListener('input', function(e) {
+    cur_grid.innerHTML = `Grid size: ${e.target.value}x${e.target.value}`;
+})
