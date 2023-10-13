@@ -1,8 +1,22 @@
-const main_container = document.querySelector(".container");
+let gridSize = 16;
 
-for(let i=0; i<32; i++){
-    const new_div = document.createElement('div');
-    new_div.textContent = `Test${i+1}`;
-    new_div.classList.add("item");
-    main_container.appendChild(new_div);
-}
+const container = document.querySelector('.grid-container');
+
+function createGrid() {
+    let gridWidth = container.offsetWidth / gridSize;
+    container.style.gridTemplateColumns = `repeat(${gridSize - 3}, ${gridWidth}px) 1fr 1fr 1fr`;
+    container.style.gridTemplateRows = `repeat(${gridSize - 3}, ${gridWidth}px) 1fr 1fr 1fr`;
+    if (gridSize < 4) {
+      container.style.gridTemplateColumns = `repeat(${gridSize},1fr`;
+      container.style.gridTemplateRows = `repeat(${gridSize}, 1fr`;
+    }
+  
+    for (let i = 0; i < gridSize ** 2; i++) {
+      const square = document.createElement('div');
+      square.classList.add('grid-item');
+      square.setAttribute('draggable', 'false');
+      container.appendChild(square);
+    }
+  }
+  
+createGrid();

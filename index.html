@@ -9,10 +9,23 @@
     
 </head>
 <body>
-    <h1>Etch A Sketch!</h1>
     <div class="container">
+        <div class="controls">
+          <div class="controls-inner">
+            <h3>Controls</h3>
+            <div class="grid-size">8x8</div>
+            <input type="range" min="2" max="100" value="8" />
+            <button class="apply">Apply</button>
+            <button class="reset">RESET
+            </button>
+          </div>
+        </div>
 
-    </div>
+        <div class="grid-wrapper">
+            <div class="grid-container toggle-grid" draggable="false"></div>
+        </div>
+        
+      </div>
     
 </body>
 </html>
